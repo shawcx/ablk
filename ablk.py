@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 import sys
 import argparse
@@ -66,9 +67,28 @@ def display(path,showFileName=False):
 
 
 def main():
+    argparser = argparse.ArgumentParser()
+
+    argparser.add_argument('images',
+        nargs='+', default=None,
+        help='Image files')
+
+    argparser.add_argument('--delay', '-d',
+        type=float, default=1.0,
+        help='Delay between each image')
+
+    argparser.add_argument('--no-name', '-n',
+        action='store_false',
+        help='Show filename of image')
+
+    args = argparser.parse_args()
+
     try:
-        for path in sys.argv[1:]:
-            display(path, True)
+        totalLength = len(args.images)
+        for index in range(totalLength):
+            display(args.images[index], args.no_name)
+            if index + 1 < totalLength:
+                time.sleep(args.delay)
     except KeyboardInterrupt:
         sys.stdout.write('\033[0m\n')
 
