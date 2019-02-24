@@ -8,9 +8,10 @@ import time
 import PIL.Image
 import PIL.ExifTags
 
-dim = shutil.get_terminal_size(fallback=(80,24))
 
 def display(path,showFileName=False):
+    dim = shutil.get_terminal_size(fallback=(80,24))
+
     try:
         img = PIL.Image.open(path)
     except:
@@ -64,5 +65,13 @@ def display(path,showFileName=False):
         sys.stdout.write('\033[0m\n')
 
 
-for path in sys.argv[1:]:
-    display(path, True)
+def main():
+    try:
+        for path in sys.argv[1:]:
+            display(path, True)
+    except KeyboardInterrupt:
+        sys.stdout.write('\033[0m\n')
+
+
+if '__main__' == __name__:
+    main()
