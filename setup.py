@@ -12,7 +12,7 @@ setup(
     author_email     = 'moertle@gmail.com',
     license          = 'MIT',
     description      = 'Terminal image viewer',
-    long_description = open('docs/README.rst').read(),
+    long_description = open('README.rst').read(),
     url              = 'https://github.com/moertle/ablk',
     entry_points = {
         'console_scripts': [
