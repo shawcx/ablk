@@ -52,17 +52,19 @@ def display(path,showFileName=False):
         rows += 1
 
     img = img.resize((cols, rows))
+    img = img.convert('RGB')
 
     if showFileName:
         sys.stdout.write('\033[1;44m'+' ' * cols + '\r')
         sys.stdout.write('\033[1;37m '+path+'\033[0m\n')
 
-    buff = []
     for row in range(0,rows,2):
         for col in range(cols):
             p1 = img.getpixel((col, row + 0))
             p2 = img.getpixel((col, row + 1))
-            sys.stdout.write('\033[38;2;%d;%d;%dm\033[48;2;%d;%d;%dm▀' % (p1[0],p1[1],p1[2],p2[0],p2[1],p2[1]))
+            values = (p1[0],p1[1],p1[2],p2[0],p2[1],p2[1])
+            sys.stdout.write('\033[38;2;%d;%d;%dm\033[48;2;%d;%d;%dm▀' % values)
+
         sys.stdout.write('\033[0m\n')
 
 
