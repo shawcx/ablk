@@ -62,9 +62,8 @@ def display(path,showFileName=False):
         for col in range(cols):
             p1 = img.getpixel((col, row + 0))
             p2 = img.getpixel((col, row + 1))
-            values = (p1[0],p1[1],p1[2],p2[0],p2[1],p2[1])
+            values = (p1[0],p1[1],p1[2],p2[0],p2[1],p2[2])
             sys.stdout.write('\033[38;2;%d;%d;%dm\033[48;2;%d;%d;%dm▀' % values)
-
         sys.stdout.write('\033[0m\n')
 
 
@@ -81,7 +80,7 @@ def main():
 
     argparser.add_argument('--no-name', '-n',
         action='store_false',
-        help='Show filename of image')
+        help='Do not show filename of image')
 
     args = argparser.parse_args()
 
