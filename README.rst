@@ -17,3 +17,6 @@ optional arguments:
   --delay DELAY, -d DELAY
                         Delay between each image
   --no-name, -n         Show filename of image
+
+
+.. image:: ./example.png
