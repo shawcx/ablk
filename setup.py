@@ -8,8 +8,8 @@ from setuptools import setup
 setup(
     name             = 'ablk',
     version          = '0.3',
-    author           = 'Matthew Oertle',
-    author_email     = 'moertle@gmail.com',
+    author           = 'Matthew Shaw',
+    author_email     = 'mshaw.cx@gmail.com',
     license          = 'MIT',
     description      = 'Terminal image viewer',
     long_description = open('README.rst').read(),
