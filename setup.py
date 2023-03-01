@@ -13,7 +13,7 @@ setup(
     license          = 'MIT',
     description      = 'Terminal image viewer',
     long_description = open('README.rst').read(),
-    url              = 'https://github.com/moertle/ablk',
+    url              = 'https://github.com/shawcx/ablk',
     entry_points = {
         'console_scripts': [
             'ablk    = ablk:main',
