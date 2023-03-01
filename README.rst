@@ -3,7 +3,7 @@ ablk
 ====
 Terminal image viewer.
 ----------------------
-Matthew Oertle <moertle@gmail.com>
+Matthew Shaw <mshaw.cx@gmail.com>
 
 ablk is a image viewer that uses the UTF-8 block character and 24-bit ANSI escape sequences to render an image in the terminal window. Useful over SSH into a remote machine to get an idea of what an image file looks like.
 
