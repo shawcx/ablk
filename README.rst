@@ -20,7 +20,7 @@ optional arguments:
   -h, --help            show this help message and exit
   --delay DELAY, -d DELAY
                         Delay between each image
-  --no-name, -n         Show filename of image
+  --no-name, -n         Do not show filename of image
 
 
 .. image:: ./example.png
