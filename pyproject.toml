@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "ablk"
-version = "0.3"
+version = "0.3.1"
 description = "Terminal image viewer"
 readme = "README.rst"
 license = {text = "MIT"}
