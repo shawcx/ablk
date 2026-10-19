@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ablk"
+version = "0.3"
+description = "Terminal image viewer"
+readme = "README.rst"
+license = {text = "MIT"}
+authors = [{name = "Matthew Shaw", email = "mshaw.cx@gmail.com"}]
+dependencies = ["pillow"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Multimedia :: Graphics :: Viewers",
+]
+
+[project.urls]
+Homepage = "https://github.com/shawcx/ablk"
+
+[project.scripts]
+ablk = "ablk:main"
+
+[tool.setuptools]
+py-modules = ["ablk"]
